@@ -18,11 +18,11 @@ function getAndPrintHTML () {
       var dataBuff = data.toString()
       buffed += dataBuff;
 
-      console.log('Chunk received.', data);
+      // console.log('Chunk received.');
     });
 
     response.on('end', function() {
-      console.log('Response stream complete.');
+      console.log('Response stream complete.', buffed);
     });
 
   });
